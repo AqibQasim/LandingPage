@@ -1,0 +1,813 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>Soft3 Solutions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Precedence Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- font-awesome icons -->
+	<link href="css/fontawesome-all.min.css" rel="stylesheet">
+	<!-- //Custom Theme files -->
+	<!--webfonts-->
+	<!--//webfonts-->
+	<style type="text/css">
+		.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+	</style>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDO7IToKPxZonnBl33CE6UWpxj82AXOHrs",
+    authDomain: "contactus-5deac.firebaseapp.com",
+    databaseURL: "https://contactus-5deac.firebaseio.com",
+    projectId: "contactus-5deac",
+    storageBucket: "contactus-5deac.appspot.com",
+    messagingSenderId: "912767705890"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript">
+  function getcontact(){
+  var name = "";
+  var email = "";
+  var number = "";
+  var message = "";
+  name = document.getElementById('name').value;
+  email = document.getElementById('email').value;
+  number = document.getElementById('number').value;
+  message = document.getElementById('message').value;
+  if(name != "" && email != "" && email != "" && message != ""){
+    firebase.database().ref('contactus-5deac').push({
+      C_Name: name,
+      C_Email: email,
+      C_number: number,
+      C_Message: message
+      });
+    alert ('Thanks for Contacting us! we will back to you in next 24 hours');
+     document.getElementById('name').value = "";
+     document.getElementById('email').value = "";
+     document.getElementById('number').value = "";
+     document.getElementById('message').value = "";
+  } 
+  }
+</script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+			<!-- /header-top-->
+			<section style="background: black;">
+			<header class="main-header" style="background: black;">
+				<nav class="navbar second navbar-expand-lg navbar-light bg-light pagescrollfix" style="background: black;">
+					<div class="container" >
+							<a class="navbar-brand" href="index.html">
+								<img src="images/logo.png" class="img-fluid" alt="" width="250" height="70" />
+							</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-toggle" aria-controls="navbarNavAltMarkup1"
+						    aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse navbar-toggle" id="navbarNavAltMarkup1">
+							<div class="navbar-nav secondfix ml-lg-auto">
+								<ul class="navbar-nav text-center">
+									<li class="nav-item active  mr-3">
+										<a class="nav-link" href="index.html">Home
+											<span class="sr-only">(current)</span>
+										</a>
+									</li>
+									<li class="nav-item  mr-3">
+										<a class="nav-link scroll" href="#about">About Soft3 Solutions</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link scroll" href="#services">services</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link scroll" href="#blog">Portfolio</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link scroll" href="#contact">contact</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+		</section>
+		<!-- //header -->
+		<!-- banner -->
+		<div class="banner">
+			<div class="container">
+				<div class="banner-text-agile">
+					<div class="row">
+						<div class="col-lg-6">
+							<!-- Carousel -->
+							<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<h3 class="b-w3ltxt text-capitalize mt-md-4">
+											<span>Website</span>  Development</h3>
+										<p class="mt-2" style="text-align:justify;">Soft3 Solutions developed website in a professional way so that maximum benefits can be extracted.</p>
+										<a class="btn btn-banner mt-md-3 mt-2 text-capitalize scroll" href="#services" role="button">explore services</a>
+									</div>
+									<!-- slider text -->
+									<div class="carousel-item">
+										<h3 class="b-w3ltxt text-capitalize mt-md-4">
+											<span>Database </span> Development</h3>
+										<p class="mt-2" style="text-align:justify;">Our Database Solutions enable you to manage data to maximize utilization of database resources.</p>
+										<a class="btn btn-banner mt-md-3 mt-2 text-capitalize scroll" href="#services" role="button">explore services</a>
+									</div>
+									<!-- slider text -->
+									<div class="carousel-item text-white">
+										<h3 class="b-w3ltxt  text-capitalize mt-md-4">
+											<span>Desktop</span> Application</h3>
+										<p class="mt-2" style="text-align:justify;">Soft3 Solutions offer cross-platform desktop app development services to help you turn a solid softwares.</p>
+										<a class="btn btn-banner mt-md-3 mt-2 text-capitalize scroll" href="#services" role="button">explore services</a>
+									</div>
+									<div class="carousel-item text-white">
+										<h3 class="b-w3ltxt  text-capitalize mt-md-4">
+											<span>Mobile</span> Application</h3>
+										<p class="mt-2" style="text-align:justify;">Over the past decade, Soft3 Solutions has successfully carried out over 350 mobile application projects.</p>
+										<a class="btn btn-banner mt-md-3 mt-2 text-capitalize scroll" href="#services" role="button">explore services</a>
+									</div>
+									<div class="carousel-item text-white">
+										<h3 class="b-w3ltxt  text-capitalize mt-md-4">
+											<span>Social Media</span> Marketing</h3>
+										<p class="mt-2" style="text-align:justify;">Soft3 Solutions specialize in expert content to attract,engage and even convert customers to social relationships.</p>
+										<a class="btn btn-banner mt-md-3 mt-2 text-capitalize scroll" href="#services" role="button">explore services</a>
+									</div>
+									<!-- slider text -->
+								</div>
+							</div>
+							<!-- Carousel -->
+							
+						</div>
+						<div class="col-lg-6">
+							<img src="images/banner1.png" class="img img-resposive"  height="370">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //banner -->
+		<!-- banner bottom -->
+		<div class="serv_bottom py-sm-5 py-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<h4 class="agile-ser_bot text-light text-capitalize">Advanced software made simple in Soft3 Solutions </h4>
+					</div>
+					<div class="col-lg-4 my-lg-auto mt-3 text-lg-right">
+						<a href="#services" class="text-capitalize serv_link btn scroll">view services</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //banner-bottom -->
+		<!-- about-->
+		<section class="wthree-row py-sm-5" id="about">
+			<div class="container py-md-5">
+				<div class="row abbot-main py-lg-5 py-4">
+					<div class="col-lg-6 abbot-right">
+						<span></span>
+						<img src="images/about.png" class="img-fluid" alt=""/>
+					</div>
+					<div class="col-lg-6 about-text-grid">
+						<h3 class="stat-title">About Us
+						</h3>
+						<p class="mt-md-5 mt-3" style="text-align: justify;">It was early 90’s when we entered the field of Software Development, Internet Marketing, Web designing and management. Since we were new in the market, our main aim was to increase the number of our clients effectively. Due to our best customer services, our clients have been much satisfied with our services plus we never planned for a promotional campaign of our products.</p>
+                       
+                       <a href="about.html" class="text-capitalize serv_link btn bg-theme" style="margin-top: 50px;"> More About Us</a>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- //about -->
+		<!-- services -->
+		<section class="services-w3sec py-5" id="services">
+			<div class="container">
+				<div class="agileabt-w3 py-lg-5">
+					<div class="w3l-head text-center  pb-5">
+						<h3 class="stat-title">services
+						</h3>
+						<p class="sec-title text-capitalize">
+							Soft3 Solutions provide best services to our client</p>
+					</div>
+					<div class="row py-lg-5">
+						<!-- Table #1  -->
+						<div class="col-lg-4">
+							<div class="w3ls-pricing card">
+								<div class="card-header">
+									<h4 class="serv-title">
+										Website Development
+									</h4>
+								</div>
+								<div class="card-block">
+									<p class="card-title price-title">
+										Soft3 Solutions developed website in a professional way so that maximum benefits can be extracted.
+									</p>
+									<a href="service1.html" class="text-capitalize price_link btn">read more</a>
+								</div>
+								<i class="service-icon fas fa-database">
+								</i>
+							</div>
+						</div>
+						<!-- Table #1  -->
+						<div class="col-lg-4 my-lg-0 my-5">
+							<div class="w3ls-pricing card ">
+								<div class="card-header">
+									<h4 class="serv-title">
+										DatabaseDevelopment
+									</h4>
+								</div>
+								<div class="card-block">
+									<p class="card-title price-title">
+										Our Database Solutions enable you to manage data to maximize utilization of database resources.
+									</p>
+									<a href="service2.html" class="text-capitalize price_link btn">read more</a>
+								</div>
+								<i class="service-icon far fa-lightbulb">
+								</i>
+							</div>
+						</div>
+						<!-- Table #1  -->
+						<div class="col-lg-4 mb-lg-0 mb-5">
+							<div class="w3ls-pricing card">
+								<div class="card-header">
+									<h4 class="serv-title">
+										Desktop Application
+									</h4>
+								</div>
+								<div class="card-block">
+									<p class="card-title price-title">
+										Soft3 Solutions offer platform-specific and cross-platform desktop app development services to help you turn a solid softwares.
+									</p>
+									<a href="service3.html" class="text-capitalize price_link btn">read more</a>
+								</div>
+								<i class="service-icon fas fa-bullhorn">
+								</i>
+							</div>
+						</div>
+					</div>
+					<div class="row py-lg-5">
+						<div class="col-lg-4 mb-lg-0 mb-5">
+							<div class="w3ls-pricing card">
+								<div class="card-header">
+									<h4 class="serv-title">
+										Mobile Application
+									</h4>
+								</div>
+								<div class="card-block">
+									<p class="card-title price-title">
+										Over the past decade, Soft3 Solutions has successfully carried out over 350 mobile application projects.
+									</p>
+									<a href="service4.html" class="text-capitalize price_link btn">read more</a>
+								</div>
+								<i class="service-icon fas fa-bullhorn">
+								</i>
+							</div>
+						</div>
+						<div class="col-lg-4 mb-lg-0 mb-5">
+							<div class="w3ls-pricing card">
+								<div class="card-header">
+									<h4 class="serv-title">
+										Social Marketing
+									</h4>
+								</div>
+								<div class="card-block">
+									<p class="card-title price-title">
+										Soft3 Solutions specialize in high quality content to attract,engage and even convert customers to social relationships.
+									</p>
+									<a href="service5.html" class="text-capitalize price_link btn ">read more</a>
+								</div>
+								<i class="service-icon fas fa-bullhorn">
+								</i>
+							</div>
+						</div>
+					</div>
+					<div class="text-center">
+						<a href="#sub-services" class="text-capitalize serv_link btn bg-theme scroll">explore now</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //services -->
+		<!-- sub services -->
+		<section class="py-md-5" id="sub-services">
+			<div class="container">
+				<div class="agileabt-w3">
+					<div class="row py-5">
+						<div class="col-lg-8">
+							<h3 class="stat-title"> 3+ years of experiences</h3>
+							<ul class="list-group mt-3">
+								<li class="list-group-item border-0">
+									<i class="fas fa-check mr-3"></i>Quality Workers</li>
+								<li class="list-group-item border-0">
+									<i class="fas fa-check mr-3"></i>Creative Designer</li>
+								<li class="list-group-item border-0">
+									<i class="fas fa-check mr-3"></i>Marketing Experts</li>
+								<li class="list-group-item border-0">
+									<i class="fas fa-check mr-3"></i>Web Developers</li>
+								<li class="list-group-item border-0">
+									<i class="fas fa-check mr-3"></i>Database Developers</li>
+								<li class="list-group-item border-0">
+									<i class="fas fa-check mr-3"></i>Software Developers</li>
+								<li class="list-group-item border-0">
+									<i class="fas fa-check mr-3"></i>Mobile Application Developers</li>
+							</ul>
+						</div>
+						<div class="col-lg-4 grad_video my-lg-auto mt-5">
+							<img src="images/i1.png" class="img-fluid" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //sub services -->
+		<!-- testimonials-->
+		<div class="testimonials" id="testi">
+			<div class="container">
+				<div class="banner-text text-center">
+					<h3 class="stat-title">what our clients say
+					</h3>
+					<div class="callbacks_container">
+						<ul class="rslides" id="slider3">
+							<li>
+								<div class="testi-agile">
+									<p>
+										<span>"</span>Soft3 Solutions provided us excellent graphics design and quality service in every department.
+										<span>"</span>
+									</p>
+									<div class="testi-pos">
+										<img src="images/ts1.jpg" alt="" class="img-fluid rounded-circle" />
+										<h4>Muhammad Aqib</h4>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="testi-agile">
+									<p>
+										<span>"</span>Data Security is the main challenge today, but Soft3 Solutions provided such a great website where security level is high and trustworthy
+										<span>"</span>
+									</p>
+									<div class="testi-pos">
+										<img src="images/ts2.jpg" alt="" class="img-fluid rounded-circle" />
+										<h4>Ashfaq Ali</h4>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="testi-agile">
+									<p>
+										<span>"</span>Soft3 Solutions are best in all services
+										<span>"</span>
+									</p>
+									<div class="testi-pos">
+										<img src="images/ts3.jpg" alt="" class="img-fluid rounded-circle" />
+										<h4>Muhammad Tanzeel</h4>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //testimonials -->
+		<!-- branches -->
+		<section class="py-5 branches position-relative" id="explore">
+			<div class="container py-md-5">
+				<h3 class="stat-title text-center pb-lg-5">our capabilities
+				</h3>
+				<div class="row text-center py-sm-5 pb-2 pt-5">
+					<div class="col-md-3 col-6">
+						<div class="services-box">
+							<span class="icon">
+								<i class="fas fa-pencil-alt"></i>
+							</span>
+							<h4>Creative Designers</h4>
+						</div>
+					</div>
+					<div class="col-md-3 col-6">
+						<div class="services-box">
+							<span class="icon">
+								<i class="fas fa-rocket"></i>
+							</span>
+							<h4>Marketing Experts</h4>
+						</div>
+					</div>
+					<!-- .Services-box ends here -->
+					<div class="col-md-3 col-6 mt-md-0 mt-5">
+						<div class="services-box">
+							<span class="icon">
+								<i class="fa fa-laptop"></i>
+							</span>
+							<h4>Best Programmers</h4>
+						</div>
+					</div>
+					<div class="col-md-3 col-6 mt-md-0 mt-5">
+						<div class="services-box">
+							<span class="icon">
+								<i class="fas fa-code"></i>
+							</span>
+							<h4>Coading Experts</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+				
+		<!-- //branches -->
+		<!-- contact top -->
+		<div class="contact-top text-center">
+			<div class="content-contact-top">
+				<h3 class="stat-title text-white">for more information</h3>
+				<a href="#contact" class="text-capitalize serv_link btn my-sm-5 my-3 scroll">stay in touch</a>
+				<p class="text-white w-75 mx-auto">
+					<span class="glyphicon glyphicon-envelope"></span> Email us on info@soft3solutions.com to hired us or <span class="glyphicon glyphicon-envelope"></span>call us on +92-3242928740 .we would be happy answer you and set up a meeting with you.
+				</p>
+			</div>
+		</div>
+		<!-- //contact top -->
+		<!-- blog -->
+		<section class="section-events py-5" id="blog">
+			<div class="container py-md-5">
+				<h3 class="stat-title text-center pb-sm-5">Latest Portfolio
+				</h3>
+				<div class="sub-sec-grid position-relative my-5">
+					<div class="row">
+						<div class="col-lg-4">
+							<a href="http://www.soft3solutions.com/SindhPetrolium/index.php">
+								<img class="card-img-bottom" src="images/Portfolio1.png" alt="Card image cap">
+							</a>
+						</div>
+						<div class="col-lg-8 date-grid-agile-right">
+							<div class="card-body">
+								<h5 class="blog-title card-title font-weight-bold">
+									Desktop Application
+								</h5>
+								<p class="card-text  mb-5">This is our best Desktop Application on sindh petrolium with all the updates of petrolium products</p>
+								<div class="text-right">
+									<a href="http://www.soft3solutions.com/SindhPetrolium/index.php" class="price_link btn">Read more</a>
+								</div>
+							</div>
+						</div>
+						<div class="pos-date">
+							<div class="pos-date__inner">
+								<h2 class="pos-date__title">12</h2>
+								<p class="pos-date__subtitle">june</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub-sec-grid position-relative">
+					<div class="row">
+						<div class="col-lg-8 date-grid-agile-left">
+							<div class="card-body">
+								<h5 class="blog-title card-title font-weight-bold">
+									Website Development
+								</h5>
+								<p class="card-text  mb-5">This is Sports Website for our client.In this website we can see latest updates for sports and we also buy sports item </p>
+								<div class="text-right">
+									<a href="#" class="price_link btn">Read more</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<a href="#">
+								<img class="card-img-bottom" src="images/Portfolio2.png" alt="Card image cap">
+							</a>
+						</div>
+						<div class="pos-date-even">
+							<div class="pos-date__inner">
+								<h2 class="pos-date__title">16</h2>
+								<p class="pos-date__subtitle">june</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub-sec-grid position-relative my-5">
+					<div class="row">
+						<div class="col-lg-4">
+							<a href="#">
+								<img class="card-img-bottom" src="images/Portfolio3.png" alt="Card image cap">
+							</a>
+						</div>
+						<div class="col-lg-8 date-grid-agile-right">
+							<div class="card-body">
+								<h5 class="blog-title card-title font-weight-bold">
+									Website Development
+								</h5>
+								<p class="card-text  mb-5">This is Event Managment Website for our client.In this website we can arrange any events like birthday party , marriage ceremony etc...</p>
+								<div class="text-right">
+									<a href="#" class="price_link btn">Read more</a>
+								</div>
+							</div>
+						</div>
+						<div class="pos-date">
+							<div class="pos-date__inner">
+								<h2 class="pos-date__title">20</h2>
+								<p class="pos-date__subtitle">july</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //blog -->
+		<!-- contact -->
+		<div class="w3-contact py-5" id="contact">
+			<div class="container py-lg-5">
+				<h3 class="stat-title text-center pb-5">contact us
+				</h3>
+				<div class="row contact-form pt-lg-5">
+					<!-- contact details -->
+					<div class="col-lg-6 contact-bottom d-flex flex-column contact-right-w3ls">
+						<h5>get in touch</h5>
+						<div class="fv3-contact">
+							<div class="row">
+								<div class="col-2">
+									<span class="fas fa-envelope-open"></span>
+								</div>
+								<div class="col-10 contact-add">
+									<h6>email</h6>
+									<p>
+										<a href="mailto:example@email.com" class="text-dark">info@soft3solutions.com</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="fv3-contact my-4">
+							<div class="row">
+								<div class="col-2">
+									<span class="fas fa-phone-volume"></span>
+								</div>
+								<div class="col-10 contact-add">
+									<h6>phone</h6>
+									<p>+92-3242928740</p>
+								</div>
+							</div>
+						</div>
+						<div class="fv3-contact">
+							<div class="row">
+								<div class="col-2">
+									<span class="fas fa-home"></span>
+								</div>
+								<div class="col-10 contact-add">
+									<h6>address</h6>
+									<p>+90 nsequursu dsdesdc, Street State 34789.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 wthree-form-left my-lg-0 mt-5">
+						<h5>send us a mail</h5>
+						<!-- contact form grid -->
+						<div class="contact-top1">
+							<form action="#" method="get" class="contact-wthree">
+								<div class="form-group d-flex">
+									<label>
+										Name
+									</label>
+									<input class="form-control" type="text" placeholder="Johnson" id="name" name="email" required="">
+								</div>
+								<div class="form-group d-flex">
+									<label>
+										Email
+									</label>
+									<input class="form-control" type="email" placeholder="example@email.com" id="email" name="email" required="">
+								</div>
+								<div class="form-group d-flex">
+									<label>
+										Phone
+									</label>
+									<input class="form-control" type="text" placeholder="XXXX XXXX XX" id="number" name="email" required="">
+								</div>
+								<div class="form-group d-flex">
+									<label>
+										Message
+									</label>
+									<textarea class="form-control" rows="5" id="message" placeholder="Your message" required></textarea>
+								</div>
+								<div class="d-flex justify-content-end">
+									<button type="submit" class="btn btn-agile btn-block w-25" onclick="getcontact()">Send</button>
+								</div>
+							</form>
+						</div>
+						<!--  //contact form grid ends here -->
+					</div>
+
+				</div>
+				<!-- //contact details container -->
+			</div>
+		</div>
+		<!-- //contact -->
+		<!-- Footer -->
+		<footer id="footer" class="py-5">
+			<div class="container">
+				<div class="row  py-lg-5">
+					<div class="col-lg-3 col-sm-6 footer-logo">
+						<h5>about us</h5>
+						<p class="mt-3" style="text-align: justify;">We have a team of highly motivated staff who are ready to go out of the way to come up to the expectations of our clients.We whole heartedly believe in this term.</p>
+						<a href="about.html">More About us</a>
+					</div>
+					<div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
+						<h5>Quick links</h5>
+						<ul class="list-unstyled quick-links">
+							<li>
+								<a href="#">
+									<i class="fa fa-angle-double-right"></i>Home</a>
+							</li> 
+							<li>
+								<a href="#about" class="scroll">
+									<i class="fa fa-angle-double-right"></i>About</a>
+							</li>
+							<li>
+								<a href="#services" class="scroll">
+									<i class="fa fa-angle-double-right"></i>Services</a>
+							</li>
+							<li>
+								<a href="#blog" class="scroll">
+									<i class="fa fa-angle-double-right"></i>Portfolio</a>
+							</li>
+							<li>
+								<a href="#contact" class="scroll">
+									<i class="fa fa-angle-double-right"></i>Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+						<h5>working hours</h5>
+						<ul class="list-unstyled quick-links">
+							<li>
+								Monday - Friday
+								<br>
+								<span>9:00 am - 5:00 pm</span>
+							</li>
+							<li>
+								Saturday
+								<br>
+								<span> 10:00 am - 5:00 pm </span>
+							</li>
+							<li>
+								Sunday
+								<br>
+								<span> Holiday </span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-sm-6 footer_grid1 mt-lg-0 mt-4">
+						<h5>Address</h5>
+						<div class="fv3-contact">
+							<span class="fas fa-envelope-open mr-2"></span>
+							<p>
+								<a href="mailto:example@email.com">info@soft3solutions.com</a>
+							</p>
+						</div>
+						<div class="fv3-contact my-2">
+							<span class="fas fa-phone-volume mr-2"></span>
+							<p>+92-3242928740</p>
+						</div>
+						<div class="fv3-contact">
+							<span class="fas fa-home mr-2"></span>
+							<p>+90 nsequursu dsdesdc,
+								<br>xxx Street State 34789.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+	<!-- /Footer -->
+	<!-- js-->
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<!-- js-->
+	<!-- Scrolling Nav JavaScript -->
+	<script src="js/scrolling-nav.js"></script>
+	<!-- //fixed-scroll-nav-js -->
+	<script>
+		$(window).scroll(function () {
+			if ($(document).scrollTop() > 70) {
+				$('nav.pagescrollfix,nav.RWDpagescrollfix').addClass('shrink');
+			} else {
+				$('nav.pagescrollfix,nav.RWDpagescrollfix').removeClass('shrink');
+			}
+		});
+	</script>
+	<!-- Banner text Responsiveslides -->
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use"$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider3").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!-- //Banner text  Responsiveslides -->
+	<!-- start-smooth-scrolling -->
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!-- smooth-scrolling-of-move-up -->
+	<script>
+		$(document).ready(function () {
+			/*
+			 var defaults = {
+				 containerID: 'toTop', // fading element id
+				 containerHoverID: 'toTopHover', // fading element hover id
+				 scrollSpeed: 1200,
+				 easingType: 'linear' 
+			 };
+			 */
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<!-- //smooth-scrolling-of-move-up -->
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.js">
+	</script>
+	<!-- //Bootstrap Core JavaScript -->
+</body>
+
+</html>
